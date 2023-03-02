@@ -1,0 +1,56 @@
+.searchvideo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 2px;
+  padding: 8px;
+  width: 100%;
+  cursor: pointer;
+  font-family: Roboto, Arial, sans-serif;
+  &__image {
+    width: 23rem;
+    border-radius: 10px;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    margin-left: 15px;
+  }
+  &__title {
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 2px;
+    font-size: 18px;
+    text-align: start;
+  }
+
+  &__views {
+    font-weight: 300;
+    font-size: 13px;
+    color: #a5a5a5;
+  }
+  &__time {
+    font-weight: 300;
+    font-size: 13px;
+    color: #a5a5a5;
+  }
+  &__side {
+    margin-top: 17px;
+    display: flex;
+    align-items: center;
+  }
+  &__thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
+  &__channel {
+    font-weight: 500;
+    font-size: 13px;
+    color: #a5a5a5;
+  }
+}

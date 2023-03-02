@@ -1,0 +1,139 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  height: 8vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 0rem 0.7rem;
+  background-color: #0f0f0f;
+  // Header Left
+  &__left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__menu {
+      cursor: pointer;
+      color: white;
+      padding: 0.6rem;
+      border-radius: 50%;
+      display: flex;
+      &:hover {
+        background-color: #272727;
+      }
+    }
+    &__yticon {
+      height: 20px;
+      margin: auto 1.5rem;
+      cursor: pointer;
+      background-color: #0f0f0f;
+    }
+  }
+  // Header Center
+  &__center {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    &__search_box {
+      display: flex;
+      border: 0.2px solid #434343;
+      width: 600px;
+      height: 40px;
+      border-radius: 20px;
+      overflow: hidden;
+      // &:focus {
+      //   border: 1px solid #0364a5;
+      // }
+      .search_bar {
+        background-color: #121212;
+        width: 89%;
+        height: 100%;
+        border: none;
+        // border: 0.2px solid #2b2b2b;
+        // border-right: none;
+        // border-radius: 20px 0px 0px 20px;
+        padding: 0 20px;
+        font-size: 16px;
+        text-transform: capitalize;
+        caret-color: white;
+        color: white;
+        // &:focus {
+        //   border: 1px solid #0364a5;
+        // }
+      }
+      .search_btn {
+        width: 11%;
+        height: 100%;
+        background: #222222;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        // border: 0.2px solid #2b2b2b;
+        // border-radius: 0px 20px 20px 0px;
+        // border-left: none;
+        .search__icon {
+          color: white;
+          background-color: #222222;
+          // margin: auto;
+          border-radius: 50%;
+        }
+      }
+    }
+    &__voice {
+      display: flex;
+      cursor: pointer;
+      color: white;
+      border-radius: 50%;
+      padding: 0.6rem;
+      margin-left: 8px;
+      background-color: #181818;
+      &:hover {
+        background-color: #272727;
+      }
+    }
+  }
+  // Header RIght
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 1.7rem;
+    gap: 16px;
+    &__addvideo {
+      display: flex;
+      cursor: pointer;
+      color: white;
+      padding: 0.6rem;
+      border-radius: 50%;
+      &:hover {
+        background-color: #272727;
+      }
+    }
+    &__notification {
+      display: flex;
+      cursor: pointer;
+      color: white;
+      padding: 0.6rem;
+      border-radius: 50%;
+      &:hover {
+        background-color: #272727;
+      }
+    }
+    &__user_dp {
+      display: flex;
+      cursor: pointer;
+      height: 33px;
+      width: 33px;
+      border-radius: 50%;
+      overflow: hidden;
+      .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
