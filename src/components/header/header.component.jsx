@@ -8,13 +8,18 @@ import VideoCallOutlinedIcon from "@mui/icons-material/VideoCallOutlined";
 import VideoCallIcon from "@mui/icons-material/VideoCall";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Image from "../../assests/CircleImage.png";
 
 const Header = ({ open, setOpen }) => {
   const [addVideo, setAddVideo] = useState(false);
   const [notification, setNotification] = useState(false);
-
+  const [input, setInput] = useState("");
+  let navigate = useNavigate();
+  const handleChange = (e) => {
+    e.preventDefault();
+    navigate(`/search/${input}`);
+  };
   return (
     <header className="header">
       <div className="header__left">
@@ -25,9 +30,16 @@ const Header = ({ open, setOpen }) => {
           <Logo className="header__left__yticon" />
         </Link>
       </div>
+
       <div className="header__center">
-        <form className="header__center__search_box">
-          <input placeholder="Search" className="search_bar" />
+        <form onSubmit={handleChange} className="header__center__search_box">
+          <input
+            type="text"
+            placeholder="Search"
+            className="search_bar"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
           <button type="submit" className="search_btn">
             <SearchIcon style={{ fontSize: 27 }} className="search__icon" />
           </button>
@@ -36,16 +48,8 @@ const Header = ({ open, setOpen }) => {
           <KeyboardVoiceRoundedIcon />
         </div>
       </div>
+
       <div className="header__right">
-        {/* {categories.map(({ icons, activeIcons, name }, i) => (
-          <div
-            key={i}
-            className="header__right__addvideo"
-            onClick={() => handleClick(i)}
-          >
-            {activeElement === i ? activeIcons : icons}
-          </div>
-        ))} */}
         <div
           className="header__right__addvideo"
           onClick={() => setAddVideo(!addVideo)}

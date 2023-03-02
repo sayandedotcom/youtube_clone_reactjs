@@ -17,7 +17,7 @@ function App() {
         }
       ></Route>
       <Route
-        path="/search"
+        path="/search/:input"
         element={
           <Layout>
             <SearchPage />

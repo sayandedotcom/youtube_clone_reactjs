@@ -7,11 +7,12 @@ import { getPopularVideos } from "../../redux/popularSlice";
 import "./homepage.component.scss";
 
 const HomePage = () => {
-  const { videos, isLoading } = useSelector((state) => state.homeVideos);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPopularVideos());
   }, [dispatch]);
+
+  const { videos, isLoading } = useSelector((state) => state.homeVideos);
 
   return (
     <>

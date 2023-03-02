@@ -1,6 +1,6 @@
 .searchvideo {
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   flex-direction: row;
   margin-top: 2px;
   padding: 8px;
@@ -8,7 +8,6 @@
   cursor: pointer;
   font-family: Roboto, Arial, sans-serif;
   &__image {
-    width: 23rem;
     border-radius: 10px;
   }
   &__bottom {
@@ -49,6 +48,12 @@
     height: 30px;
   }
   &__channel {
+    font-weight: 500;
+    font-size: 13px;
+    color: #a5a5a5;
+  }
+  &__description {
+    margin-top: 1rem;
     font-weight: 500;
     font-size: 13px;
     color: #a5a5a5;
