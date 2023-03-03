@@ -4,19 +4,17 @@
 
 YouTube Clone made with Reactjs. This is a solo Project.
 
-## 📌 Features 💡 
+<!-- ## 📌 Features 💡 
 
-- Multiple Routes.
+- Multiple Routes. -->
 
 ## 📌 Technologies used 🛠️
 
 - [ReactJS](https://reactjs.org) - Javascript library
 - [React-Router](https://www.npmjs.com/package/react-router) - Used for Routing 
-- [Redux](https://redux.js.org/) - Used for State Management 
-- [Styled Components](https://styled-components.com/) - Used for writting conditions in CSS 
+- [Redux-Toolkit](https://redux-toolkit.js.org/) - Used for State Management 
 - [SCSS](https://sass-lang.com/) - Used for Styling
-- [React-Icons](https://react-icons.github.io/react-icons/) - Used for Icons
-- [Firebase](https://firebase.google.com/) - Used for Authentication
+- [Material Ui](https://mui.com/) - Used for Icons and some Styling
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
@@ -50,10 +48,10 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/sayande2002/My-Portfolio-Website-ReactJs.git
+$ git clone https://github.com/sayande2002/youtube_clone_reactjs
 
 # Go into the repository
-$ cd My-Portfolio-Website-ReactJs
+$ cd youtube_clone_reactjs
 
 # Remove current origin repository
 $ git remote remove origin
