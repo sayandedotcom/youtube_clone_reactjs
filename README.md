@@ -17,6 +17,8 @@ YouTube Clone made with Reactjs. This is a solo Project.
 - [Material Ui](https://mui.com/) - Used for Icons and some Styling
 - [YouTube API V3](https://developers.google.com/youtube/v3) - API used in this Project
 - [Axios](https://axios-http.com/docs/intro) - For HTTP request
+- [Numeral.js](http://numeraljs.com/) - Used for formatting and manipulating numbers (eg views on youtube videos)
+- [Moment.js](https://momentjs.com/) - Used for parsing, validating, manipulating, and formatting dates (eg Video Upload dates on youtube videos)
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
