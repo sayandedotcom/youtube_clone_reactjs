@@ -4,19 +4,24 @@
 
 YouTube Clone made with Reactjs. This is a solo Project.
 
-## 📌 Features 💡 
+<!-- ## 📌 Features 💡 
 
-- Multiple Routes.
+- Multiple Routes. -->
 
-## 📌 Technologies used 🛠️
+## 📌 Technologies, Technologies and Libraries used 🛠️
 
 - [ReactJS](https://reactjs.org) - Javascript library
 - [React-Router](https://www.npmjs.com/package/react-router) - Used for Routing 
-- [Redux](https://redux.js.org/) - Used for State Management 
-- [Styled Components](https://styled-components.com/) - Used for writting conditions in CSS 
+- [Redux-Toolkit](https://redux-toolkit.js.org/) - Used for State Management 
 - [SCSS](https://sass-lang.com/) - Used for Styling
-- [React-Icons](https://react-icons.github.io/react-icons/) - Used for Icons
-- [Firebase](https://firebase.google.com/) - Used for Authentication
+- [Material Ui](https://mui.com/) - Used for Icons and some Styling
+- [YouTube API V3](https://developers.google.com/youtube/v3) - API used in this Project
+- [Axios](https://axios-http.com/docs/intro) - For HTTP request
+- [Numeral.js](http://numeraljs.com/) - Used for formatting and manipulating numbers (eg views on youtube videos)
+- [Moment.js](https://momentjs.com/) - Used for parsing, validating, manipulating, and formatting dates (eg Video Upload dates on youtube videos)
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used for Imfinite Data Fetching
+- [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component) - Used for Lazy Loading Image for Optimization
+npm i 
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
@@ -50,10 +55,10 @@ From your command line, first clone this repo:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/sayande2002/My-Portfolio-Website-ReactJs.git
+$ git clone https://github.com/sayande2002/youtube_clone_reactjs
 
 # Go into the repository
-$ cd My-Portfolio-Website-ReactJs
+$ cd youtube_clone_reactjs
 
 # Remove current origin repository
 $ git remote remove origin
@@ -72,6 +77,9 @@ $ npm start
 ```
 
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server.
+
+### 📌 WARNING
+If the app does not load anything or the search function doesn't work, it is very likely the daily YouTube API quota has exceeded. There are only 5000 daily quotas for free usage, and each search costs 100 quotas.
 
 ### 📌 Authors
 -[Sayan De](https://github.com/sayande2002)
