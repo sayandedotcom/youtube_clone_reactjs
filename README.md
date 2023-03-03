@@ -8,7 +8,7 @@ YouTube Clone made with Reactjs. This is a solo Project.
 
 - Multiple Routes. -->
 
-## 📌 Technologies used 🛠️
+## 📌 Technologies, Technologies and Libraries used 🛠️
 
 - [ReactJS](https://reactjs.org) - Javascript library
 - [React-Router](https://www.npmjs.com/package/react-router) - Used for Routing 
@@ -19,6 +19,9 @@ YouTube Clone made with Reactjs. This is a solo Project.
 - [Axios](https://axios-http.com/docs/intro) - For HTTP request
 - [Numeral.js](http://numeraljs.com/) - Used for formatting and manipulating numbers (eg views on youtube videos)
 - [Moment.js](https://momentjs.com/) - Used for parsing, validating, manipulating, and formatting dates (eg Video Upload dates on youtube videos)
+- [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used for Imfinite Data Fetching
+- [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component) - Used for Lazy Loading Image for Optimization
+npm i 
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
