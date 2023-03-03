@@ -8,25 +8,26 @@ import SubscriptionsIcon from "@mui/icons-material/Subscriptions";
 import VideoLibraryOutlinedIcon from "@mui/icons-material/VideoLibraryOutlined";
 import VideoLibraryIcon from "@mui/icons-material/VideoLibrary";
 import "./sidebarclose.component.scss";
+import { Tooltip } from "@mui/material";
 const categories = [
   {
-    icons: <HomeOutlinedIcon style={{ fontSize: 27 }} />,
-    activeIcons: <HomeIcon style={{ fontSize: 27 }} />,
+    icons: <HomeOutlinedIcon />,
+    activeIcons: <HomeIcon />,
     name: "Home",
   },
   {
-    icons: <ExploreOutlinedIcon style={{ fontSize: 27 }} />,
-    activeIcons: <ExploreIcon style={{ fontSize: 27 }} />,
+    icons: <ExploreOutlinedIcon />,
+    activeIcons: <ExploreIcon />,
     name: "Explore",
   },
   {
-    icons: <SubscriptionsOutlinedIcon style={{ fontSize: 27 }} />,
-    activeIcons: <SubscriptionsIcon style={{ fontSize: 27 }} />,
+    icons: <SubscriptionsOutlinedIcon />,
+    activeIcons: <SubscriptionsIcon />,
     name: "Subscriptions",
   },
   {
-    icons: <VideoLibraryOutlinedIcon style={{ fontSize: 27 }} />,
-    activeIcons: <VideoLibraryIcon style={{ fontSize: 27 }} />,
+    icons: <VideoLibraryOutlinedIcon />,
+    activeIcons: <VideoLibraryIcon />,
     name: "Library",
   },
 ];
@@ -37,14 +38,16 @@ const SidebarClose = () => {
   return (
     <div className="sidebarclose">
       {categories.map(({ icons, activeIcons, name }, i) => (
-        <div
-          key={i}
-          className="sidebarclose__items"
-          onClick={() => handleClick(i)}
-        >
-          {activeElement === i ? activeIcons : icons}
-          <span className="sidebarclose__text">{name}</span>
-        </div>
+        <Tooltip title={name} placement="right-end">
+          <div
+            key={i}
+            className="sidebarclose__items"
+            onClick={() => handleClick(i)}
+          >
+            {activeElement === i ? activeIcons : icons}
+            <span className="sidebarclose__text">{name}</span>
+          </div>
+        </Tooltip>
       ))}
     </div>
   );

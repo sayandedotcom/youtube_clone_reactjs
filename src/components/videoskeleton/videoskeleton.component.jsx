@@ -2,13 +2,13 @@ import React from "react";
 import "./videoskeleton.component.scss";
 const Videoskeleton = () => {
   return (
-    <div className="video">
-      <div className="video__image" />
-      <div className="video__bottom">
-        <div className="video__thumbnail" />
-        <div className="video__info">
-          <div className="video__title"></div>
-          <div className="video__channel"></div>
+    <div className="videosk">
+      <div className="videosk__image" />
+      <div className="videosk__bottom">
+        <div className="videosk__thumbnail" />
+        <div>
+          <div className="videosk__title"></div>
+          <div className="videosk__channel"></div>
         </div>
       </div>
     </div>

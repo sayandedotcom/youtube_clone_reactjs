@@ -3,6 +3,9 @@ import "./video.component.scss";
 import moment from "moment/moment";
 import request from "../../api";
 import numeral from "numeral";
+import { Tooltip } from "@mui/material";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import AltImage from "../../assests/skeleton.png";
 const Video = ({ video }) => {
   const {
     id,
@@ -58,13 +61,27 @@ const Video = ({ video }) => {
   return (
     <div className="video">
       <div className="video__top">
-        <img className="video__image" src={medium.url} alt="" />
+        {/* <img className="video__image" src={medium.url} alt="" /> */}
+        <LazyLoadImage
+          className="video__image"
+          alt={AltImage}
+          src={medium.url}
+        />
         <span className="video__duration">{_duration}</span>
       </div>
       <div className="video__bottom">
-        <img className="video__thumbnail" src={channelIcon?.url} alt="" />
+        {/* <img className="video__thumbnail" src={channelIcon?.url} alt="" /> */}
+        <LazyLoadImage
+          className="video__thumbnail"
+          alt={AltImage}
+          src={channelIcon?.url}
+        />
         <div className="video__info">
-          <p className="video__title">{title}</p>
+          <Tooltip title={title} placement="bottom">
+            <p className="video__title">
+              {title.length < 60 ? title : title.slice(0, 59) + "..."}
+            </p>
+          </Tooltip>
           <p className="video__channel">{channelTitle}</p>
           <span className="video__views">
             {numeral(views).format("0.a")} •{" "}

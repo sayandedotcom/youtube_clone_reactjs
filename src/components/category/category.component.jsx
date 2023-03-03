@@ -1,3 +1,4 @@
+import { Tooltip } from "@mui/material";
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getPopularVideos } from "../../redux/popularSlice";
@@ -12,6 +13,7 @@ const categories = [
   "Messi",
   "Ronaldo",
   "Neymar",
+  "IPL",
   "Politics",
   "Science",
   "USA",
@@ -37,13 +39,15 @@ const Category = () => {
   return (
     <div className="categories">
       {categories.map((value, i) => (
-        <div
-          className={activeElement === value ? "tags tags--active" : "tags"}
-          key={i}
-          onClick={() => handleClick(value)}
-        >
-          {value}
-        </div>
+        <Tooltip title={value} placement="bottom-end" key={i}>
+          <div
+            className={activeElement === value ? "tags tags--active" : "tags"}
+            key={i}
+            onClick={() => handleClick(value)}
+          >
+            {value}
+          </div>
+        </Tooltip>
       ))}
     </div>
   );

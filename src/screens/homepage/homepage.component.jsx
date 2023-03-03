@@ -3,7 +3,9 @@ import { useDispatch, useSelector } from "react-redux";
 import Category from "../../components/category/category.component";
 import Video from "../../components/video/video.component";
 import Videoskeleton from "../../components/videoskeleton/videoskeleton.component";
-import { getPopularVideos } from "../../redux/popularSlice";
+import Spinner from "../../components/spinner/spinner.component";
+import { getPopularVideos, getCategoryVideos } from "../../redux/popularSlice";
+import InfiniteScroll from "react-infinite-scroll-component";
 import "./homepage.component.scss";
 
 const HomePage = () => {
@@ -12,16 +14,35 @@ const HomePage = () => {
     dispatch(getPopularVideos());
   }, [dispatch]);
 
-  const { videos, isLoading } = useSelector((state) => state.homeVideos);
+  const { videos, activeCategory, isLoading } = useSelector(
+    (state) => state.homeVideos
+  );
+
+  const fetchData = () => {
+    if (activeCategory === "All") dispatch(getPopularVideos());
+    else {
+      dispatch(getCategoryVideos(activeCategory));
+    }
+  };
 
   return (
     <>
       <Category />
-      <div className="home__videos">
-        {videos.map((video) => (
-          <Video video={video} key={video.id.videoId} />
+      <InfiniteScroll
+        dataLength={videos.length}
+        next={fetchData}
+        hasMore={true}
+        loader={[...new Array(8)].map((_, i) => (
+          <Videoskeleton key={i} />
         ))}
-      </div>
+        className="infinite"
+      >
+        {!isLoading
+          ? videos.map((video) => (
+              <Video video={video} key={video.id.videoId} />
+            ))
+          : [...new Array(20)].map((_, i) => <Videoskeleton key={i} />)}
+      </InfiniteScroll>
     </>
   );
 };

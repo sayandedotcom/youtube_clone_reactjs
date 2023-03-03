@@ -65,7 +65,10 @@ const homeVideoSlice = createSlice({
       })
       .addCase(getPopularVideos.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.videos = action.payload.videos;
+        state.videos =
+          state.activeCategory === action.payload.category
+            ? [...state.videos, ...action.payload.videos]
+            : action.payload.videos;
         state.nextPageToken = action.payload.nextPageToken;
         state.activeCategory = action.payload.category;
       })

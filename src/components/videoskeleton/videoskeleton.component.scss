@@ -1,23 +1,42 @@
-// .video {
-//   &__image {
-//     background-color: #252525;
-//     border-radius: 10px;
-//     height: 165px;
-//   }
-//   &__title {
-//     height: 1.5rem;
-//     width: 14.4rem;
-//     border-radius: 4px;
-//     background-color: #252525;
-//     margin-bottom: 8px;
-//   }
-//   &__channel {
-//     height: 1.4rem;
-//     width: 9.4rem;
-//     border-radius: 4px;
-//     background-color: #252525;
-//   }
-//   &__thumbnail {
-//     background-color: #252525;
-//   }
-// }
+.videosk {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  padding: 8px;
+  width: 25%;
+  &__image {
+    background-color: #252525;
+    border-radius: 10px;
+    height: 165px;
+  }
+  &__bottom {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+  }
+  &__thumbnail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+  &__title {
+    height: 1.5rem;
+    width: 14.4rem;
+    border-radius: 4px;
+    background-color: #252525;
+    margin-bottom: 8px;
+  }
+  &__channel {
+    height: 1.4rem;
+    width: 9.4rem;
+    border-radius: 4px;
+    background-color: #252525;
+  }
+  &__thumbnail {
+    background-color: #252525;
+  }
+}
