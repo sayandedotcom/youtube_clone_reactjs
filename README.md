@@ -15,6 +15,8 @@ YouTube Clone made with Reactjs. This is a solo Project.
 - [Redux-Toolkit](https://redux-toolkit.js.org/) - Used for State Management 
 - [SCSS](https://sass-lang.com/) - Used for Styling
 - [Material Ui](https://mui.com/) - Used for Icons and some Styling
+- [YouTube API V3](https://developers.google.com/youtube/v3) - API used in this Project
+- [Axios](https://axios-http.com/docs/intro) - For HTTP request
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
@@ -70,6 +72,9 @@ $ npm start
 ```
 
 Once your server has started, go to this url `http://localhost:3000/` and you will see the website running on a Development Server.
+
+### 📌 WARNING
+If the app does not load anything or the search function doesn't work, it is very likely the daily YouTube API quota has exceeded. There are only 5000 daily quotas for free usage, and each search costs 100 quotas.
 
 ### 📌 Authors
 -[Sayan De](https://github.com/sayande2002)
