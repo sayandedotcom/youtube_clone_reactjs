@@ -25,7 +25,7 @@ function App() {
         }
       ></Route>
       <Route
-        path="/watch"
+        path="/watch/:watch"
         element={
           <Layout>
             <Watchpage />

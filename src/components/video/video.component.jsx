@@ -6,7 +6,9 @@ import numeral from "numeral";
 import { Tooltip } from "@mui/material";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import AltImage from "../../assests/skeleton.png";
+import { useNavigate } from "react-router-dom";
 const Video = ({ video }) => {
+  const navigate = useNavigate();
   const {
     id,
     snippet: {
@@ -58,8 +60,11 @@ const Video = ({ video }) => {
     get_channel_icon();
   }, [channelId]);
 
+  const handleVideoClick = () => {
+    navigate(`/watch/${_videoId}`);
+  };
   return (
-    <div className="video">
+    <div className="video" onClick={handleVideoClick}>
       <div className="video__top">
         {/* <img className="video__image" src={medium.url} alt="" /> */}
         <LazyLoadImage

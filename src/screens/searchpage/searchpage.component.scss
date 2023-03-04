@@ -4,6 +4,11 @@
   margin: 5rem 0rem 6.5rem 9rem;
   width: 75%;
 }
+.searchinfinite {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 .search__filters {
   display: flex;
   justify-content: center;
