@@ -32,9 +32,7 @@ const HomePage = () => {
         dataLength={videos.length}
         next={fetchData}
         hasMore={true}
-        loader={[...new Array(8)].map((_, i) => (
-          <Videoskeleton key={i} />
-        ))}
+        loader={<Spinner />}
         className="infinite"
       >
         {!isLoading
