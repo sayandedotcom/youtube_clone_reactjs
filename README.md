@@ -21,7 +21,7 @@ YouTube Clone made with Reactjs. This is a solo Project.
 - [Moment.js](https://momentjs.com/) - Used for parsing, validating, manipulating, and formatting dates (eg Video Upload dates on youtube videos)
 - [react-infinite-scroll-component](https://www.npmjs.com/package/react-infinite-scroll-component) - Used for Imfinite Data Fetching
 - [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component) - Used for Lazy Loading Image for Optimization
-npm i 
+- [react-top-loading-bar](https://www.npmjs.com/package/react-top-loading-bar) - Used for top loading bar
 - [Vercel](https://vercel.com/) - Used for Deployment
 
 
