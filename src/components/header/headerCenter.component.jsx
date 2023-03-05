@@ -5,17 +5,20 @@ import SearchIcon from "@mui/icons-material/Search";
 import KeyboardVoiceRoundedIcon from "@mui/icons-material/KeyboardVoiceRounded";
 import { Tooltip } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { fullProgress } from "../../redux/loaderSlice";
 
-const Headercenter = ({ progress, setProgress }) => {
+const Headercenter = () => {
   const navigate = useNavigate();
   const [input, setInput] = useState("");
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     e.preventDefault();
     navigate(`/search/${input}`);
   };
   const loader = () => {
-    setProgress(progress + 100);
+    dispatch(fullProgress());
   };
   return (
     <div className="header__center">

@@ -4,21 +4,11 @@ import Headerright from "./headerRight.component";
 import Headercenter from "./headerCenter.component";
 import Headerleft from "./headerLeft.component";
 
-const Header = ({ progress, setProgress, open, setOpen }) => {
+const Header = ({ open, setOpen }) => {
   return (
     <header className="header">
-      <Headerleft
-        open={open}
-        setOpen={setOpen}
-        progress={progress}
-        setProgress={setProgress}
-      />
-      <Headercenter
-        open={open}
-        setOpen={setOpen}
-        progress={progress}
-        setProgress={setProgress}
-      />
+      <Headerleft open={open} setOpen={setOpen} />
+      <Headercenter open={open} setOpen={setOpen} />
       <Headerright />
     </header>
   );

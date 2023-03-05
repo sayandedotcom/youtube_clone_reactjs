@@ -7,12 +7,15 @@ import Spinner from "../../components/spinner/spinner.component";
 import { getPopularVideos, getCategoryVideos } from "../../redux/popularSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./homepage.component.scss";
+import { fullProgress } from "../../redux/loaderSlice";
 
-const HomePage = ({ progress, setProgress }) => {
-  useEffect(() => {
-    setProgress(100);
-  }, []);
+const HomePage = () => {
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fullProgress());
+  }, []);
+
   useEffect(() => {
     dispatch(getPopularVideos());
   }, [dispatch]);
