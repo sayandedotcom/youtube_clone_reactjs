@@ -8,7 +8,10 @@ import { getPopularVideos, getCategoryVideos } from "../../redux/popularSlice";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./homepage.component.scss";
 
-const HomePage = () => {
+const HomePage = ({ progress, setProgress }) => {
+  useEffect(() => {
+    setProgress(100);
+  }, []);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPopularVideos());

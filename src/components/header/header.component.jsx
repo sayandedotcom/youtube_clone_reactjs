@@ -1,40 +1,26 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./header.component.scss";
-import LoadingBar from "react-top-loading-bar";
 import Headerright from "./headerRight.component";
 import Headercenter from "./headerCenter.component";
 import Headerleft from "./headerLeft.component";
 
-const Header = ({ open, setOpen }) => {
-  const [progress, setProgress] = useState(0);
-  useEffect(() => {
-    setProgress(100);
-  }, []);
-
+const Header = ({ progress, setProgress, open, setOpen }) => {
   return (
-    <>
-      <LoadingBar
-        color="#ff0000"
-        height={2}
+    <header className="header">
+      <Headerleft
+        open={open}
+        setOpen={setOpen}
         progress={progress}
-        onLoaderFinished={() => setProgress(0)}
+        setProgress={setProgress}
       />
-      <header className="header">
-        <Headerleft
-          open={open}
-          setOpen={setOpen}
-          progress={progress}
-          setProgress={setProgress}
-        />
-        <Headercenter
-          open={open}
-          setOpen={setOpen}
-          progress={progress}
-          setProgress={setProgress}
-        />
-        <Headerright />
-      </header>
-    </>
+      <Headercenter
+        open={open}
+        setOpen={setOpen}
+        progress={progress}
+        setProgress={setProgress}
+      />
+      <Headerright />
+    </header>
   );
 };
 
