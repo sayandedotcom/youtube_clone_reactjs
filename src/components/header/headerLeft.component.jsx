@@ -11,7 +11,6 @@ const Headerleft = ({ open, setOpen, progress, setProgress }) => {
   const refresh = () => {
     if (location.pathname === "/") {
       window.location.reload(true);
-      setProgress(progress + 100);
     }
   };
 
