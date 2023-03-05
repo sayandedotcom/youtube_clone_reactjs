@@ -20,11 +20,12 @@ const Header = ({ open, setOpen }) => {
   const [progress, setProgress] = useState(0);
   const [input, setInput] = useState("");
   const location = useLocation();
+  let navigate = useNavigate();
 
   const refresh = () => {
     if (location.pathname === "/") {
-      setProgress(progress + 10);
       window.location.reload(true);
+      setProgress(progress + 100);
     }
   };
 
@@ -32,7 +33,6 @@ const Header = ({ open, setOpen }) => {
     setProgress(progress + 100);
   };
 
-  let navigate = useNavigate();
   const handleChange = (e) => {
     e.preventDefault();
     navigate(`/search/${input}`);
@@ -80,12 +80,8 @@ const Header = ({ open, setOpen }) => {
               <CloseRoundedIcon style={{ fontSize: 30 }} />
             </div>
             <Tooltip title="Search" placement="bottom">
-              <button type="submit" className="search_btn">
-                <SearchIcon
-                  style={{ fontSize: 27 }}
-                  className="search__icon"
-                  onClick={loader}
-                />
+              <button type="submit" className="search_btn" onClick={loader}>
+                <SearchIcon style={{ fontSize: 27 }} className="search__icon" />
               </button>
             </Tooltip>
           </form>
