@@ -63,14 +63,15 @@ const Video = ({ video }) => {
   const handleVideoClick = () => {
     navigate(`/watch/${_videoId}`);
   };
+
   return (
     <div className="video" onClick={handleVideoClick}>
       <div className="video__top">
         {/* <img className="video__image" src={medium.url} alt="" /> */}
         <LazyLoadImage
           className="video__image"
-          alt={AltImage}
           src={medium.url}
+          effect="blur"
         />
         <span className="video__duration">{_duration}</span>
       </div>
@@ -78,8 +79,8 @@ const Video = ({ video }) => {
         {/* <img className="video__thumbnail" src={channelIcon?.url} alt="" /> */}
         <LazyLoadImage
           className="video__thumbnail"
-          alt={AltImage}
           src={channelIcon?.url}
+          effect="blur"
         />
         <div className="video__info">
           <Tooltip title={title} placement="bottom">
