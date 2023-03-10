@@ -11,11 +11,15 @@ export const loaderSlice = createSlice({
     initialProgress: (state) => {
       state.progress = 0;
     },
+    pendingProgress: (state) => {
+      state.progress = 30;
+    },
     fullProgress: (state) => {
       state.progress = 100;
     },
   },
 });
 
-export const { initialProgress, fullProgress } = loaderSlice.actions;
+export const { initialProgress, pendingProgress, fullProgress } =
+  loaderSlice.actions;
 export default loaderSlice.reducer;

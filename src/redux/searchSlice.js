@@ -3,23 +3,22 @@ import request from "../api";
 const initialState = {
   videos: [],
   isLoading: false,
-  nextPageToken: null,
-  activeCategory: "All",
+  keyword: null,
 };
 
 export const getSearchedVideos = createAsyncThunk(
   "searchVideos/fetchVideo",
-  async (keyword) => {
+  async (search) => {
     try {
       const { data } = await request("/search", {
         params: {
           part: "snippet",
           maxResults: 20,
-          q: keyword,
+          q: search,
           type: "video",
         },
       });
-      return data.items;
+      return { videos: data.items, keyword: search };
     } catch (error) {
       console.log(error.message);
     }
@@ -37,7 +36,11 @@ const searchSlice = createSlice({
       })
       .addCase(getSearchedVideos.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.videos = action.payload;
+        state.videos =
+          state.keyword === action.payload.keyword
+            ? [...state.videos, ...action.payload.videos]
+            : action.payload.videos;
+        state.keyword = action.payload.keyword;
       })
       .addCase(getSearchedVideos.rejected, (state, action) => {
         state.isLoading = false;

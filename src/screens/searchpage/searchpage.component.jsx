@@ -13,13 +13,18 @@ const SearchPage = () => {
   const { input } = useParams();
   const dispatch = useDispatch();
   const [visible, setVisible] = useState(false);
+
   useEffect(() => {
+    window.scrollTo({ top: 0 });
     dispatch(getSearchedVideos(input));
   }, [input, dispatch]);
+
   const { videos } = useSelector((state) => state.searchVideos);
-  // const fetchSearchData = () => {
-  //   dispatch(getSearchedVideos(input));
-  // };
+
+  const fetchSearchData = () => {
+    dispatch(getSearchedVideos(input));
+  };
+
   return (
     <div className="search__videos">
       <Tooltip title="Filters" placement="bottom">
@@ -41,17 +46,17 @@ const SearchPage = () => {
       </div>
       <Divider style={{ borderTop: "1px solid grey" }} />
 
-      {/* <InfiniteScroll
+      <InfiniteScroll
         dataLength={videos.length}
         next={fetchSearchData}
         hasMore={true}
         loader={<Spinner />}
         className="searchinfinite"
-      > */}
-      {videos.map((video) => (
-        <SearchVideo video={video} key={video.id.videoId} />
-      ))}
-      {/* </InfiniteScroll> */}
+      >
+        {videos.map((video, i) => (
+          <SearchVideo video={video} key={i} />
+        ))}
+      </InfiniteScroll>
     </div>
   );
 };
