@@ -7,6 +7,8 @@ YouTube Clone made with Reactjs. This is a solo Project.
 <!-- ## 📌 Features 💡 
 
 - Multiple Routes. -->
+- Infinite Scrolling. -->
+
 
 ## 📌 Technologies, Technologies and Libraries used 🛠️
 
@@ -26,7 +28,8 @@ YouTube Clone made with Reactjs. This is a solo Project.
 
 
 ## 📌 Sneak Peek of Main Page:
-(Comming Soon)
+![Screenshot (211)](https://user-images.githubusercontent.com/107565578/224445336-02fbf02b-f536-4e09-a386-718a7466cb2f.png)
+
 
 ## 📌 Getting Started 🚀
 
