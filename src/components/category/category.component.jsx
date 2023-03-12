@@ -31,8 +31,10 @@ const Category = () => {
   const handleClick = (value) => {
     setActiveElement(value);
     if (value === "All") {
+      window.scrollTo({ top: 0 });
       dispatch(getPopularVideos());
     } else {
+      window.scrollTo({ top: 0 });
       dispatch(getCategoryVideos(value));
     }
   };
